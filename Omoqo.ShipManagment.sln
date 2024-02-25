@@ -1,0 +1,93 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34601.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Omoqo.ShipManagment", "src\Omoqo.ShipManagment\Omoqo.ShipManagment.csproj", "{1D1F64B2-BC25-4FFF-8E8C-EECDCF7E8DCE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ports", "Ports", "{A3F114EE-EDF0-487A-B7E0-167EC4CC76A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{675EA57F-3C3C-4B63-8781-B670F1F3CDEC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Adapters", "Adapters", "{AC46FAC1-0C5D-42F5-8C69-6AFE628371AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Omoqo.ShipManagement.Infra", "src\Omoqo.ShipManagement.Infra\Omoqo.ShipManagement.Infra.csproj", "{505A28A1-241C-474B-BCC5-343307F03574}"
+	ProjectSection(ProjectDependencies) = postProject
+		{32536906-CD01-4324-B67A-68E6C7C49114} = {32536906-CD01-4324-B67A-68E6C7C49114}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Omoqo.ShipManagement.Application", "src\Omoqo.ShipManagement.Application\Omoqo.ShipManagement.Application.csproj", "{32536906-CD01-4324-B67A-68E6C7C49114}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Omoqo.ShipManagement.Domain", "src\Omoqo.ShipManagement.Domain\Omoqo.ShipManagement.Domain.csproj", "{BC2583B4-EC6E-49C7-BA5B-D92B5711F549}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{1582EC57-AE02-4A35-A2BF-A75DA280B4F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Omoqo.Shared.Notifications", "src\Omoqo.Shared.Notifications\Omoqo.Shared.Notifications.csproj", "{C408CDB7-2CAA-448A-A877-2B3E93A62C4A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Omoqo.Shared.Support", "src\Omoqo.Shared.Support\Omoqo.Shared.Support.csproj", "{7A3DB953-2AE3-4465-AE9F-FE2BBFA03B61}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShipManagementGUI", "src\ShipManagementGUI\ShipManagementGUI.csproj", "{AD4DDD1B-CE99-4B5B-B6A0-67864C09A593}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{855E6C04-4216-48B9-9D6B-336D9543763E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Omoqo.ShipManagement.Application.Tests", "src\Omoqo.ShipManagement.Application.Tests\Omoqo.ShipManagement.Application.Tests.csproj", "{F34D48FC-1F5A-49A7-89C3-BA9F22D6137C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{32536906-CD01-4324-B67A-68E6C7C49114} = {32536906-CD01-4324-B67A-68E6C7C49114}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D1F64B2-BC25-4FFF-8E8C-EECDCF7E8DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D1F64B2-BC25-4FFF-8E8C-EECDCF7E8DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D1F64B2-BC25-4FFF-8E8C-EECDCF7E8DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D1F64B2-BC25-4FFF-8E8C-EECDCF7E8DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{505A28A1-241C-474B-BCC5-343307F03574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{505A28A1-241C-474B-BCC5-343307F03574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{505A28A1-241C-474B-BCC5-343307F03574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{505A28A1-241C-474B-BCC5-343307F03574}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32536906-CD01-4324-B67A-68E6C7C49114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32536906-CD01-4324-B67A-68E6C7C49114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32536906-CD01-4324-B67A-68E6C7C49114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32536906-CD01-4324-B67A-68E6C7C49114}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC2583B4-EC6E-49C7-BA5B-D92B5711F549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC2583B4-EC6E-49C7-BA5B-D92B5711F549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC2583B4-EC6E-49C7-BA5B-D92B5711F549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC2583B4-EC6E-49C7-BA5B-D92B5711F549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C408CDB7-2CAA-448A-A877-2B3E93A62C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C408CDB7-2CAA-448A-A877-2B3E93A62C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C408CDB7-2CAA-448A-A877-2B3E93A62C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C408CDB7-2CAA-448A-A877-2B3E93A62C4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A3DB953-2AE3-4465-AE9F-FE2BBFA03B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A3DB953-2AE3-4465-AE9F-FE2BBFA03B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A3DB953-2AE3-4465-AE9F-FE2BBFA03B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A3DB953-2AE3-4465-AE9F-FE2BBFA03B61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD4DDD1B-CE99-4B5B-B6A0-67864C09A593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD4DDD1B-CE99-4B5B-B6A0-67864C09A593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD4DDD1B-CE99-4B5B-B6A0-67864C09A593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD4DDD1B-CE99-4B5B-B6A0-67864C09A593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F34D48FC-1F5A-49A7-89C3-BA9F22D6137C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F34D48FC-1F5A-49A7-89C3-BA9F22D6137C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F34D48FC-1F5A-49A7-89C3-BA9F22D6137C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F34D48FC-1F5A-49A7-89C3-BA9F22D6137C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1D1F64B2-BC25-4FFF-8E8C-EECDCF7E8DCE} = {A3F114EE-EDF0-487A-B7E0-167EC4CC76A6}
+		{505A28A1-241C-474B-BCC5-343307F03574} = {AC46FAC1-0C5D-42F5-8C69-6AFE628371AE}
+		{32536906-CD01-4324-B67A-68E6C7C49114} = {675EA57F-3C3C-4B63-8781-B670F1F3CDEC}
+		{BC2583B4-EC6E-49C7-BA5B-D92B5711F549} = {675EA57F-3C3C-4B63-8781-B670F1F3CDEC}
+		{C408CDB7-2CAA-448A-A877-2B3E93A62C4A} = {1582EC57-AE02-4A35-A2BF-A75DA280B4F0}
+		{7A3DB953-2AE3-4465-AE9F-FE2BBFA03B61} = {1582EC57-AE02-4A35-A2BF-A75DA280B4F0}
+		{AD4DDD1B-CE99-4B5B-B6A0-67864C09A593} = {A3F114EE-EDF0-487A-B7E0-167EC4CC76A6}
+		{F34D48FC-1F5A-49A7-89C3-BA9F22D6137C} = {855E6C04-4216-48B9-9D6B-336D9543763E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53BF121F-ACF4-4A70-9D99-1961A015B263}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,52 @@
+﻿@page
+@using Microsoft.AspNetCore.Components.Forms
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to this awesome ShipManagement GUI</h1>
+
+    <p>
+        <a class="btn btn-success" href="@Url.Page("Ships/Create")">Create a new Ship</a>
+    </p>
+
+    <h1 class="mb-3">List of ships</h1>
+
+    @if (Model.shipList.Any()) 
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Code</th>
+                    <th>Length(meters)</th>
+                    <th>Width(meters)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ship in Model.shipList)
+                {
+                    <tr>
+                        <td>@ship.Name</td>
+                        <td>@ship.Code</td>
+                        <td>@ship.Length</td>
+                        <td>@ship.Width</td>
+                        <td>
+                        <!-- Edit Button -->
+                        <a class="btn btn-primary" href="/Ships/Edit/@ship.Id">Edit</a>
+                    </td>
+                    </tr> 
+                }
+            </tbody>
+    </table>
+    }
+    else
+    {
+        <p>No ships found.</p> 
+    }
+
+</div>

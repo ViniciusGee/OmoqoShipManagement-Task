@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Omoqo.ShipManagement.Application\Omoqo.ShipManagement.Application.csproj" />
+    <ProjectReference Include="..\Omoqo.ShipManagement.Domain\Omoqo.ShipManagement.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
