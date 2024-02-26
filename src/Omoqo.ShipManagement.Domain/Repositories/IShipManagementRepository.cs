@@ -8,7 +8,7 @@ namespace Omoqo.ShipManagement.Domain.Repositories
         Task<Ship> GetByIdAsync(Guid shipId);
         Task<IEnumerable<Ship>> GetAllAsync();
         Task<Ship> GetTrackedByIdAsync(Guid shipId);
-        Task<bool> AnyShipWithThisNameAsync(string shipName);
+        Task<Ship> GetShipWithThisNameAsync(string shipName);
         Task<bool> AnyShipWithThisNameAndIdAsync(string shipName, Guid shipId);
         void DeleteShip(Ship ship);
     }

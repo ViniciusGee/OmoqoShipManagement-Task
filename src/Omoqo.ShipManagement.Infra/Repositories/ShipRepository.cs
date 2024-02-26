@@ -45,11 +45,13 @@ namespace Omoqo.ShipManagement.Infra.Repositories
             return result ?? default!;
         }
 
-        public async Task<bool> AnyShipWithThisNameAsync(string shipName)
+        public async Task<Ship> GetShipWithThisNameAsync(string shipName)
         {
-            return await _ships
-                .UseNolock()
-                .AnyAsync(d => d.Name == shipName);
+            var result = await _ships
+                                .AsTracking()
+                                .FirstOrDefaultAsync(d => d.Name == shipName);
+
+            return result ?? default!;
         }
 
         public async Task<bool> AnyShipWithThisNameAndIdAsync(string shipName, Guid Id)
@@ -63,6 +65,5 @@ namespace Omoqo.ShipManagement.Infra.Repositories
         {
             _ships.Remove(ship);
         }
-
     }
 }

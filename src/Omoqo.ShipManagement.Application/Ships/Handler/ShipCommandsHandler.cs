@@ -98,7 +98,7 @@ namespace Omoqo.ShipManagement.Application.Ships.Handler
 
         private async Task<bool> ValidateRulesCreateShip(string shipName)
         {
-            if (await _shipManagementRepository.AnyShipWithThisNameAsync(shipName))
+            if (await _shipManagementRepository.GetShipWithThisNameAsync(shipName) != null)
             {
                 _notifier.AddNotification(new Notification(SharedErrorMessages.Conflict, $"Already has a ship with the name {shipName}"));
                 return false;
@@ -109,10 +109,15 @@ namespace Omoqo.ShipManagement.Application.Ships.Handler
 
         private async Task<bool> ValidateRulesuUpdateShip(string shipName, Guid shipId)
         {
-            if (!await _shipManagementRepository.AnyShipWithThisNameAndIdAsync(shipName, shipId))
+            var shipWithSameName = await _shipManagementRepository.GetShipWithThisNameAsync(shipName);
+
+            if (shipWithSameName != null)
             {
-                _notifier.AddNotification(new Notification(SharedErrorMessages.Conflict, $"Already has a ship with the name {shipName}"));
-                return false;
+                if (shipWithSameName.Id != shipId)
+                {
+                    _notifier.AddNotification(new Notification(SharedErrorMessages.Conflict, $"Already has a ship with the name {shipName}"));
+                    return false;
+                }
             }
 
             return true;
